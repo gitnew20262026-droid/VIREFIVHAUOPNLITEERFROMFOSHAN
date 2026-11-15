@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- savel?certNo=C25025O823 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>E-government Platform for the Origin of China's Exports</title>
+	
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="320" name="MobileOptimized">
+	<meta http-equiv="Cache" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script src="./E-government Platform for the Origin of China's Exports_files/jquery.min.js.download"></script>
+	<script src="./E-government Platform for the Origin of China's Exports_files/basePath.js.download"></script>
+	<script src="./E-government Platform for the Origin of China's Exports_files/common.js.download"></script>
+	<!-- 第三方插件 -->
+	<script src="./E-government Platform for the Origin of China's Exports_files/pace.min.js.download"></script>
+	<style type="text/css">
+		*{
+			margin:0;padding:0;offset:0;
+		}
+		img{
+			border:0px solid red;
+			padding:0;
+			margin:0;
+		}
+		.aclass{
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+		}
+		.he1{
+			font-size:18px;
+			font-weight:bold;
+			vertical-align:middle;
+			color:dimgray;
+			padding-left: 15px;
+		}
+		.he2{
+			background-color:gray;
+		}
+		.col1{
+			width:120px;
+			color:gray;
+			vertical-align:top;
+		}
+		.col2{
+			color:#c63300;
+		}
+		a{
+			text-decoration:none;
+		}
+		.contentShowColor .col1, .contentShowColor .col2{
+			color: #999999 !important;
+		}
+	</style>
+</head>
+<body border="0" style="width:100%;height:100%;" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+<div class="user-info-popup bg-f5">
+	<div class="container-fluid">
+		<div class="row">
+			<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" style="overflow-x:hidden;overflow-y:hidden;word-break:break-word;">
+				<tbody>
+				  <tr>
+					<td colspan="1">
+					<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0"><tbody><tr>
+						<td height="40" class="he1" colspan="5">Certificate Of Origin</td>
+						<!--<td align="right" colspan="2"><a onclick="window.open('../static/Set Chinese Language Support.html','_blank');" href="#"><font color="#0000ff">Set Chinese Language Support</font></a></td>-->
+					</tr>
+					<tr>
+						<td height="1" class="he2" colspan="7"></td>
+					</tr>
+					<!--此处需要根据证书是否作废，需要通过 CORRECTSign：1是作废的-->
+					<tr class="invalidSignBox" style="display: none;">
+						<td style="color: #ff0000; font-size: 16px; font-weight: bold; padding: 20px 20px 5px 20px;">This certificate is cancelled</td>
+					</tr>
+					<tr id="contentShowColor">
+						<td colspan="7">
+							<table width="100%" style="font-size: 13px;" border="0" cellspacing="2" cellpadding="2">
+								<tbody>
+								  <tr>
+									<td height="14" colspan="3"></td>
+								  </tr>
+								  <tr>
+									<td align="right" class="col1">Exporter:&nbsp;&nbsp;</td>
+									<td class="col2">
+										<lable id="Exporter">FOSHAN MITTAL GROUP MOTORCYCLE CO., LTD.
+13 GANGMEI INDUSTRY ZONE, ZHOUCUN, LISHUI TOWN, NANHAI, FOSHAN, GUANGDONG, P.R. CHINA</lable>
+									</td>
+								</tr><tr>
+									<td height="7" colspan="3"></td>
+								</tr><tr>
+									<td align="right" class="col1">Invoice No.:&nbsp;&nbsp;</td>
+									<td class="col2">
+										<lable id="Invoice">APO-CG85</lable>
+									</td>
+								</tr><tr>
+									<td height="7" colspan="3"></td>
+								</tr><tr>
+									<td align="right" class="col1">Country/Region&nbsp;&nbsp; of Destination:&nbsp;&nbsp;</td>
+									<td class="col2">
+										<lable id="DestCountry">IRAQ</lable>
+									</td>
+								</tr><tr>
+									<td height="7" colspan="3"></td>
+								</tr><tr>
+									<td align="right" class="col1">H.S.Code:&nbsp;&nbsp;</td>
+									<td class="col2">
+										<lable id="HSCode">40132000</lable>
+									</td>
+								</tr><tr>
+									<td height="7" colspan="3"></td>
+								</tr><tr>
+									<td align="right" class="col1">Place of Issue:&nbsp;&nbsp;</td>
+									<td class="col2">
+										<lable id="ChkAdd">NANSHA, China/黄埔海关</lable>
+									</td>
+								</tr><tr>
+									<td height="7" colspan="3"></td>
+								</tr><tr>
+									<td align="right" class="col1">Date of Issue:&nbsp;&nbsp;</td>
+									<td class="col2">
+										<lable id="Chkdate">MAY.21,2026</lable>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					</tbody>
+					</table>
+				</td>
+				  </tr>
+			 	</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	var jsonDate = {
+		certNo : getUrlParam('certNo'),
+		invNo : getUrlParam('invNo')
+	}
+
+	function getUrlParam(name){
+		var reg = new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r!=null)return unescape(r[2]);return null;
+	}
+
+
+	$(function () {
+		// 页面初始化的时候，需要重置证书验证结果初始状态
+		$(".invalidSignBox").css({display: "none"});
+		$("#contentShowColor").removeClass("contentShowColor");
+
+		// 走接口获取证书的状态，依据字段invalidSign:1是作废，其他是正常
+		$.ajax({
+			type: "POST",
+			url: BasePath2 + "cov/queryPubUserCertQRcode",
+			data: JSON.stringify(jsonDate),
+			contentType: "application/json;charset=utf-8",
+			dataType: "json",
+			success: function (json) {
+				console.log(json);
+				if(json.failCode=="0"){
+					openSuccessPage(json);
+				}else{
+					if(isNotNull(json.failInfoEn)){
+						alert(json.failInfoEn);
+					}else{
+						alert("query Fail!");
+					}
+				}
+			},
+			error : function(data){
+				console.log(data);
+				alert("query Fail!");
+			}
+		});
+	});
+	function openSuccessPage(json){
+		// 判断是否是作废证书，依据字段invalidSign:1是作废，其他是正常
+		if(isNotNull(json.rows.invalidSign) && "1"==json.rows.invalidSign){
+			$(".invalidSignBox").css({display: "block"});
+			$("#contentShowColor").addClass("contentShowColor"); // 添加内容整体样式,制成灰色
+		}
+		$("#Exporter").text(json.rows.exporter);
+		$("#Invoice").text(json.rows.invNo);
+		$("#DestCountry").text(json.rows.destCountry);
+		$("#HSCode").text(json.rows.hsCode);
+		$("#ChkAdd").text(json.rows.chkAdd);
+		$("#Chkdate").text(json.rows.chkDateStr);
+	}
+
+</script>
+
+
+</body></html>
